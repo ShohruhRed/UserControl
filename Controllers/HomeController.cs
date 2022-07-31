@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using UserControl.Models;
 
@@ -23,6 +24,7 @@ namespace UserControl.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult Users()
         {
             return View();

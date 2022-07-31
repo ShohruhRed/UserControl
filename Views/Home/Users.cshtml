@@ -1,6 +1,41 @@
-﻿@{
+﻿
+@{
     ViewData["Title"] = "Users";
 }
 <h1>@ViewData["Title"]</h1>
 
 <p>Use this page to detail your site's privacy policy.</p>
+
+<br /> <br />
+<div class="container p-4 border">
+    <div class="row pb-2">
+        <div class="col">
+            <h1 class="text-primary">Users</h1>
+        </div>
+        <div class="col text-end pt-1"> 
+            <a asp-action="Users" class="btn btn-outline-primary"><i class="bi bi-plus"></i>Create user</a>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    Username
+                </th>
+                <th>
+                    Email
+                </th>
+                <th>
+                    Last login
+                </th>
+                <th> </th>
+            </tr>
+        </thead>
+        <tbody>
+            @*
+
+            *@
+        </tbody>
+
+    </table>
+</div>
