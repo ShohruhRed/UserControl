@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace UserControl.Controllers
@@ -12,12 +13,14 @@ namespace UserControl.Controllers
             _userManager = userManager;
         }
 
+        [Authorize]
         [HttpGet]
         public IActionResult ListUsers()
         {
             var users = _userManager.Users;
             return View(users);
         }
+        [Authorize]
         public IActionResult Index()
         {
             return View();

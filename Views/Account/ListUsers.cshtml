@@ -16,28 +16,35 @@
             <h1 class="text-primary">Users</h1>
         </div>
         <div class="col text-end pt-1"> 
-            <a asp-action="Users" class="btn btn-outline-primary"><i class="bi bi-plus"></i>Create user</a>
-        </div>
+            <a asp-action="Users" class="btn btn-outline-primary"><i class="bi bi-plus"></i>Activate user</a>
+            <a asp-action="Users" class="btn btn-outline-primary"><i class="bi bi-plus"></i>Deactivate user</a>
+            <a asp-action="Delete" class="btn btn-outline-primary"><i class="bi bi-plus"></i>Delete user</a>
+        </div>       
     </div>
     <table class="table">
         <thead>
             <tr>
+                <th>
+                    Id
+                </th>
                 <th>
                     Username
                 </th>
                 <th>
                     Email
                 </th>
-                <th>
-                    Last login
-                </th>
                 <th> </th>
             </tr>
         </thead>
         <tbody>
-            @*
-
-            *@
+            @foreach (var user in Model)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.UserName</td>
+                    <td>@user.Email</td>                    
+                </tr>
+            }
         </tbody>
 
     </table>
