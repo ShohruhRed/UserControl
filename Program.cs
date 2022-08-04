@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using UserControl.Data;
+using UserControl.Models;
 
 namespace UserControl
 {
@@ -16,9 +17,13 @@ namespace UserControl
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
             builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+            builder.Services.AddDistributedMemoryCache();
+            builder.Services.AddSession();
 
             builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+
+            builder.Services.AddTransient<IUsers, Users>();
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();

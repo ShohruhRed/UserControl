@@ -4,11 +4,18 @@
 
 @{
     ViewBag.Title = "All Users";
-   
+
+}
+@if (!User.Identity.IsAuthenticated)
+{
+    <h2>reg</h2>
 }
 
+else
+{
+
 <h1>All Users</h1>
-@using (Html.BeginForm("DeleteSelected", "Account", FormMethod.Post))
+@using (Html.BeginForm("DisableSelected", "Account", FormMethod.Post))
 {
 
 <p>Use this page to detail your site's privacy policy.</p>
@@ -21,10 +28,7 @@
         </div>
         <div class="col text-end pt-1">         
             <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure?')" />
-            <br />
-           @* <a asp-action="Users" class="btn btn-outline-primary"><i class="bi bi-plus"></i>Activate user</a>
-            <a asp-action="Users" class="btn btn-outline-primary"><i class="bi bi-plus"></i>Deactivate user</a>
-            <a asp-action="DeleteSelected" class="btn btn-outline-primary"><i class="bi bi-plus"></i>Delete user</a>    *@        
+            <br />                  
         </div>       
     </div>
     <table class="table">
@@ -58,8 +62,7 @@
                     <td>@user.FirstName</td>
                     <td>@user.LastName</td>
                     <td>@user.UserName</td>
-                    <td>@user.Email</td> 
-                    <td>@user</td>
+                    <td>@user.Email</td>                     
                 </tr>
             }
         </tbody>
@@ -67,7 +70,7 @@
     </table>
 </div>
 }
-
+}
 @section scripts{
      <script type="text/javascript">
     $(document).ready(function() {
