@@ -4,6 +4,7 @@
 
 @{
     ViewBag.Title = "All Users";
+   
 }
 
 <h1>All Users</h1>
@@ -25,7 +26,7 @@
     <table class="table">
         <thead>
             <tr>
-                
+                <th><input type="checkbox" id="checkboxAll" /></th>
                 <th>
                     Id
                 </th>
@@ -35,19 +36,19 @@
                 <th>
                     Last Name
                 </th>
-                <th data-field="username">
+                <th>
                     Username
                 </th>
-                <th data-field="email">
+                <th>
                     Email
-                </th>
-                <th> </th>
+                </th>                
             </tr>
         </thead>
         <tbody>
             @foreach (var user in Model)
             {
-                <tr>
+                <tr>                     
+                    <td><input type="checkbox" class="chkCheckBoxId" value="@user.Id" /></td>
                     <td>@user.Id</td>
                     <td>@user.FirstName</td>
                     <td>@user.LastName</td>
@@ -59,3 +60,16 @@
 
     </table>
 </div>
+
+@section scripts{
+     <script type="text/javascript">
+    $(document).ready(function() {
+        $('#checkboxAll').click(function() {
+            if ($(this).is(":checked"))
+                $('.chkCheckBoxId').prop('checked', true);
+            else
+                $('.chkCheckBoxId').prop('checked', false);
+        });
+    });
+    </script>
+}

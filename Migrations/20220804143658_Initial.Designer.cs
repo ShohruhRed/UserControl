@@ -12,7 +12,7 @@ using UserControl.Data;
 namespace UserControl.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220801103715_Initial")]
+    [Migration("20220804143658_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
