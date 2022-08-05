@@ -15,7 +15,7 @@ else
 {
 
 <h1>All Users</h1>
-@using (Html.BeginForm("DisableSelected", "Account", FormMethod.Post))
+@using (Html.BeginForm())
 {
 
 <p>Use this page to detail your site's privacy policy.</p>
@@ -26,10 +26,11 @@ else
         <div class="col">
             <h1 class="text-primary">Users</h1>
         </div>
-        <div class="col text-end pt-1">         
-            <input type="submit" value="Delete" class="btn btn-danger" onclick="return confirm('Are you sure?')" />
-            <br />                  
-        </div>       
+        <div class="col text-end pt-4">         
+            <input type="submit" name="disableselected" value="Disable user" class="btn btn-info" formmethod="post" formaction="DisableSelected" onclick="return confirm('Are you sure?')" />
+            <input type="submit" name="enableselected" value="Enable user" class="btn btn-success" formmethod="post" formaction="EnableSelected" onclick="return confirm('Are you sure?')" /> 
+            <input type="submit" name="deleteselected" value="Delete user" class="btn btn-danger" formmethod="post" formaction="DeleteSelected" onclick="return confirm('Are you sure?')" />
+        </div>        
     </div>
     <table class="table">
         <thead>
@@ -49,7 +50,10 @@ else
                 </th>
                 <th>
                     Email
-                </th>                
+                </th>
+                <th>
+                    Disabled
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -62,7 +66,8 @@ else
                     <td>@user.FirstName</td>
                     <td>@user.LastName</td>
                     <td>@user.UserName</td>
-                    <td>@user.Email</td>                     
+                    <td>@user.Email</td> 
+                    <td>@user.LockoutEnabled</td>
                 </tr>
             }
         </tbody>

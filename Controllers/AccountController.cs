@@ -89,6 +89,36 @@ namespace UserControl.Controllers
         }
 
         [Authorize]
+        [HttpPost]
+        public async Task<IActionResult> EnableSelected(string[] ids)
+        {
+            if (ids == null || ids.Length == 0)
+            {
+                ViewBag.ErrorMessage = $"User with Id = {ids} cannot be found";
+                return View("NotFound");
+            }
+
+            else
+            {
+                //bind the task collection into list
+                List<string> TaskIds = new List<string>(ids);
+
+                Users users = new Users(_userManager);
+
+                for (var i = 0; i < TaskIds.Count(); i++)
+                {
+                    users.UnlockUser(TaskIds[i]);
+                }
+
+
+
+                //redirect to index view once record is deleted
+                return RedirectToAction("ListUsers");
+            }
+
+        }
+
+        [Authorize]
         public IActionResult Index()
         {
             return View();
