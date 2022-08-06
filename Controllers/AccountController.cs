@@ -47,11 +47,19 @@ namespace UserControl.Controllers
 
                 for (var i = 0; i < TaskIds.Count(); i++)
                 {
+                    var isAuth = User.Identity.Name.ToString();
                     var user = await _userManager.FindByIdAsync(TaskIds[i]);
                     //remove the record from the database
                     _dbContext.Remove(user);
                     //call save changes action otherwise the table will not be updated
                     _dbContext.SaveChanges();
+
+                    if(user.UserName == isAuth)
+                    {
+                        var signOut = _signInManager.SignOutAsync();
+                        signOut.Wait();
+                    }
+
                 }
 
                 //redirect to index view once record is deleted
