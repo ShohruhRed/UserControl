@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using System.Linq;
 using UserControl.Data;
-using UserControl.Models;
 
 namespace UserControl.Controllers
 {
@@ -11,13 +9,17 @@ namespace UserControl.Controllers
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly ApplicationDbContext _dbContext;
-        
-        
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        private ApplicationUser application;
 
-        public AccountController(UserManager<ApplicationUser> userManager, ApplicationDbContext dbContext)
+
+
+
+        public AccountController(UserManager<ApplicationUser> userManager, ApplicationDbContext dbContext, SignInManager<ApplicationUser> signInManager)
         {
             _userManager = userManager;
             _dbContext = dbContext;
+            _signInManager = signInManager;
         }
 
         [Authorize]
@@ -55,7 +57,7 @@ namespace UserControl.Controllers
                 //redirect to index view once record is deleted
                 return RedirectToAction("ListUsers");
             }
-            
+
         }
 
         [Authorize]
@@ -73,15 +75,23 @@ namespace UserControl.Controllers
                 //bind the task collection into list
                 List<string> TaskIds = new List<string>(ids);
 
-                Users users = new Users(_userManager);
+                var isAuth = User.Identity.Name.ToString();
+
+                Users users = new Users(_userManager, _signInManager);
 
                 for (var i = 0; i < TaskIds.Count(); i++)
                 {
-                    users.LockUser(TaskIds[i], new DateTime(2222, 06, 06));
-                }                
-                
-                
-               
+                    users.LockUser(TaskIds[i], new DateTime(2222, 06, 06), isAuth);
+                }
+
+                application = new ApplicationUser();
+
+                if (application.LockoutEnabled)
+                {
+                    RedirectToAction("Account/Login");
+                }
+
+
                 //redirect to index view once record is deleted
                 return RedirectToAction("ListUsers");
             }
@@ -98,18 +108,21 @@ namespace UserControl.Controllers
                 return View("NotFound");
             }
 
+            
+
             else
             {
                 //bind the task collection into list
-                List<string> TaskIds = new List<string>(ids);
+                List<string> TaskIds = new List<string>(ids);                
 
-                Users users = new Users(_userManager);
+                Users users = new Users(_userManager,_signInManager);
 
                 for (var i = 0; i < TaskIds.Count(); i++)
                 {
                     users.UnlockUser(TaskIds[i]);
                 }
 
+                
 
 
                 //redirect to index view once record is deleted
@@ -121,7 +134,11 @@ namespace UserControl.Controllers
         [Authorize]
         public IActionResult Index()
         {
+
+            
             return View();
         }
+
+
     }
 }

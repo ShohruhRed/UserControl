@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using UserControl.Models;
 
+
 namespace UserControl.Data
 {
     public class Users : IUsers
@@ -8,14 +9,16 @@ namespace UserControl.Data
         #region Constructor
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly DateTime EndDate;
-        public Users(UserManager<ApplicationUser> userMgr)
+        private readonly SignInManager<ApplicationUser> _signInManager;
+        public Users(UserManager<ApplicationUser> userMgr, SignInManager<ApplicationUser> signInManager)
         {
             EndDate = new DateTime(2222, 06, 06);
 
             _userManager = userMgr;
+            _signInManager = signInManager;
         }
         #endregion
-        public bool LockUser(string email, DateTime? endDate)
+        public bool LockUser(string email, DateTime? endDate, string currentUser)
         {
             if (endDate == null)
                 endDate = EndDate;
@@ -30,9 +33,20 @@ namespace UserControl.Data
             var lockDateTask = _userManager.SetLockoutEndDateAsync(user, endDate);
             lockDateTask.Wait();
 
+            if (user.LockoutEnabled && user.UserName == currentUser)
+            {
+                var signOut = _signInManager.SignOutAsync();
+                signOut.Wait();
+                
+            }
+
+            
+            
+
             return lockDateTask.Result.Succeeded && lockUserTask.Result.Succeeded;
         }
 
+    
         public bool UnlockUser(string email)
         {
             var userTask = _userManager.FindByIdAsync(email);

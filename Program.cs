@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
 using UserControl.Data;
 using UserControl.Models;
 
@@ -16,14 +15,24 @@ namespace UserControl
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
-            builder.Services.AddDatabaseDeveloperPageExceptionFilter();
+            builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+            {
+                options.Password.RequiredLength = 1;
+                options.Password.RequiredUniqueChars = 0;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireDigit = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.SignIn.RequireConfirmedAccount = false;
+                options.Lockout.AllowedForNewUsers = false;
+            })
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession();
 
-            builder.Services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = false)
-                .AddEntityFrameworkStores<ApplicationDbContext>();
-
             builder.Services.AddTransient<IUsers, Users>();
+
             builder.Services.AddControllersWithViews();
 
             var app = builder.Build();
@@ -32,6 +41,16 @@ namespace UserControl
             if (app.Environment.IsDevelopment())
             {
                 app.UseMigrationsEndPoint();
+                //builder.Services.AddDefaultIdentity<ApplicationUser>(options =>
+                //{
+                //    options.Password.RequiredLength = 1;
+                //    options.Password.RequiredUniqueChars = 0;
+                //    options.Password.RequireLowercase = false;
+                //    options.Password.RequireUppercase = false;
+                //    options.Password.RequireDigit = false;
+                //    options.Password.RequireNonAlphanumeric = false;
+                //    options.SignIn.RequireConfirmedAccount = false;
+                //});
             }
             else
             {
@@ -47,6 +66,7 @@ namespace UserControl
 
             app.UseAuthentication();
             app.UseAuthorization();
+            app.UseSession();
 
             app.MapControllerRoute(
                 name: "default",
