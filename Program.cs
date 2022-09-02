@@ -26,8 +26,10 @@ namespace UserControl
                 options.SignIn.RequireConfirmedAccount = false;
                 options.Lockout.AllowedForNewUsers = false;
             })
+            .AddRoles<IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()
             .AddDefaultTokenProviders();
+            
             builder.Services.AddDistributedMemoryCache();
             builder.Services.AddSession();
 
