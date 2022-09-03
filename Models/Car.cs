@@ -14,6 +14,10 @@ namespace UserControl.Models
 
         public DateTime StartDate { get; set; }
 
+        //Relationship
+
+        public List<Car_CarManafacturer> Cars_Manafacturers { get; set; }
+
 
     }
 }

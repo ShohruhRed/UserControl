@@ -14,5 +14,9 @@ namespace UserControl.Models
         public DateTime FoundationDate { get; set; }
 
         public CarCategory CarCategory { get; set; }
+
+        //Relationships
+
+        public List<Car_CarManafacturer> Cars_CarManafacturers { get; set; }
     }
 }
