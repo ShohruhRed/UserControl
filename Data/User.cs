@@ -38,9 +38,7 @@ namespace UserControl.Data
                 var signOut = _signInManager.SignOutAsync();
                 signOut.Wait();
                 
-            }
-
-            
+            }          
             
 
             return lockDateTask.Result.Succeeded && lockUserTask.Result.Succeeded;
