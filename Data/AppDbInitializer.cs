@@ -20,63 +20,63 @@ namespace UserControl.Data
                         new Car()
                         {
                             CarName = "Panamera Turbo S",
-                            ProfilePictureUrl = "",
+                            ProfilePictureUrl = "https://www.dropbox.com/s/8r7puoizjevvvom/p1.jpg?dl=0",
                             StartDate = DateTime.Now.AddDays(-200),
                             Description = "luxary"
                         },
                         new Car()
                         {
                             CarName = "Cayenne GT",
-                            ProfilePictureUrl = "",
+                            ProfilePictureUrl = "https://www.dropbox.com/s/psj74dzv8dvgfpb/c1.jpg?dl=0",
                             StartDate = DateTime.Now,
                             Description = "crossover"
                         },
                         new Car()
                         {
                             CarName = "911",
-                            ProfilePictureUrl = "",
+                            ProfilePictureUrl = "https://www.dropbox.com/s/5f2ldq8c6wliv4b/911.jpg?dl=0",
                             StartDate = DateTime.Now.AddDays(10),
                             Description = "sport"
                         },
                          new Car()
                         {
                             CarName = "RANGE ROVER SPORT",
-                            ProfilePictureUrl = "",
+                            ProfilePictureUrl = "https://www.dropbox.com/s/2ncgiyz1ktkdnxg/s1.jpg?dl=0",
                             StartDate = DateTime.Now.AddDays(-200),
                             Description = "luxary"
                         },
                           new Car()
                         {
                             CarName = "RANGE ROVER VELAR",
-                            ProfilePictureUrl = "",
+                            ProfilePictureUrl = "https://www.dropbox.com/s/okn2yl0pzprxnxu/V1.jpg?dl=0",
                             StartDate = DateTime.Now.AddDays(-200),
                             Description = "luxary"
                         },
                            new Car()
                         {
                             CarName = "RANGE ROVER EVOQUE",
-                            ProfilePictureUrl = "",
+                            ProfilePictureUrl = "https://www.dropbox.com/s/jukduji8ucpx6yf/E1.jpg?dl=0",
                             StartDate = DateTime.Now.AddDays(-200),
                             Description = "luxary"
                         },
                             new Car()
                         {
                             CarName = "Phantom",
-                            ProfilePictureUrl = "",
+                            ProfilePictureUrl = "https://www.dropbox.com/s/pqv9v4ylvist0f9/Ph1.jpg?dl=0",
                             StartDate = DateTime.Now,
                             Description = "luxary"
                         },
                              new Car()
                         {
                             CarName = "Ghost",
-                            ProfilePictureUrl = "",
+                            ProfilePictureUrl = "https://www.dropbox.com/s/b30vx85zaxsas6d/Gh1.jpg?dl=0",
                             StartDate = DateTime.Now,
                             Description = "luxary"
                         },
                               new Car()
                         {
                             CarName = "Spectre",
-                            ProfilePictureUrl = "",
+                            ProfilePictureUrl = "https://www.dropbox.com/s/ptg6maeqz0qzmp5/Cl1.jpg?dl=0",
                             StartDate = DateTime.Now,
                             Description = "luxary"
                         },
@@ -94,7 +94,7 @@ namespace UserControl.Data
                         {
                             Name = "Porsche",
                             Description = "Sport cars",
-                            Logo = "",
+                            Logo = "https://www.dropbox.com/s/wuiiuk9fs600s11/Porsche_1.jpg?dl=0",
                             FoundationDate = DateTime.Now.AddDays(-1300) ,  
                             CarCategory = CarCategory.Sport
                         },
@@ -103,7 +103,7 @@ namespace UserControl.Data
                         {
                             Name = "Range Rover",
                             Description = "Land Rover",
-                            Logo = "",
+                            Logo = "https://www.dropbox.com/s/m1g2tcgkx42gan1/Land_Rover_1.jpg?dl=0",
                             FoundationDate = DateTime.Now.AddDays(-1300),
                             CarCategory = CarCategory.SUV
                         },
@@ -111,7 +111,7 @@ namespace UserControl.Data
                         {
                             Name = "Rolls Royce",
                             Description = "lux",
-                            Logo = "",
+                            Logo = "https://www.dropbox.com/s/hqpc09au5rdopl4/RolsRoyce_1.jpg?dl=0",
                             FoundationDate = DateTime.Now.AddDays(-1300),
                             CarCategory = CarCategory.Luxary
                         }

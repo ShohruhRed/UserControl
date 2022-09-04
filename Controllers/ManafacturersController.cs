@@ -2,7 +2,7 @@
 
 namespace UserControl.Controllers
 {
-    public class CarManafacturersController : Controller
+    public class ManafacturersController : Controller
     {
         public IActionResult Index()
         {
