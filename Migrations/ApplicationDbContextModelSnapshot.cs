@@ -260,7 +260,7 @@ namespace UserControl.Migrations
                     b.ToTable("Cars");
                 });
 
-            modelBuilder.Entity("UserControl.Models.Car_CarManafacturer", b =>
+            modelBuilder.Entity("UserControl.Models.Car_CarManufacturer", b =>
                 {
                     b.Property<int>("CarId")
                         .HasColumnType("int");
@@ -272,10 +272,10 @@ namespace UserControl.Migrations
 
                     b.HasIndex("CarmanId");
 
-                    b.ToTable("Cars_CarManafacturers");
+                    b.ToTable("Cars_CarManufacturers");
                 });
 
-            modelBuilder.Entity("UserControl.Models.CarManafacturer", b =>
+            modelBuilder.Entity("UserControl.Models.CarManufacturer", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -303,7 +303,7 @@ namespace UserControl.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CarManafacturers");
+                    b.ToTable("CarManufacturers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -357,33 +357,33 @@ namespace UserControl.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("UserControl.Models.Car_CarManafacturer", b =>
+            modelBuilder.Entity("UserControl.Models.Car_CarManufacturer", b =>
                 {
                     b.HasOne("UserControl.Models.Car", "Car")
-                        .WithMany("Cars_Manafacturers")
+                        .WithMany("Cars_Manufacturers")
                         .HasForeignKey("CarId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("UserControl.Models.CarManafacturer", "CarManafacturer")
-                        .WithMany("Cars_CarManafacturers")
+                    b.HasOne("UserControl.Models.CarManufacturer", "CarManufacturer")
+                        .WithMany("Cars_CarManufacturers")
                         .HasForeignKey("CarmanId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Car");
 
-                    b.Navigation("CarManafacturer");
+                    b.Navigation("CarManufacturer");
                 });
 
             modelBuilder.Entity("UserControl.Models.Car", b =>
                 {
-                    b.Navigation("Cars_Manafacturers");
+                    b.Navigation("Cars_Manufacturers");
                 });
 
-            modelBuilder.Entity("UserControl.Models.CarManafacturer", b =>
+            modelBuilder.Entity("UserControl.Models.CarManufacturer", b =>
                 {
-                    b.Navigation("Cars_CarManafacturers");
+                    b.Navigation("Cars_CarManufacturers");
                 });
 #pragma warning restore 612, 618
         }

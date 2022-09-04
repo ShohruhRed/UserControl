@@ -3,7 +3,7 @@ using UserControl.Data;
 
 namespace UserControl.Models
 {
-    public class CarManafacturer
+    public class CarManufacturer
     {
         [Key]
         public int Id { get; set; }
@@ -17,6 +17,6 @@ namespace UserControl.Models
 
         //Relationships
 
-        public List<Car_CarManafacturer> Cars_CarManafacturers { get; set; }
+        public List<Car_CarManufacturer> Cars_CarManufacturers { get; set; }
     }
 }

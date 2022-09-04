@@ -10,7 +10,7 @@ namespace UserControl.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "CarManafacturers",
+                name: "CarManufacturers",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
@@ -23,7 +23,7 @@ namespace UserControl.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_CarManafacturers", x => x.Id);
+                    table.PrimaryKey("PK_CarManufacturers", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -43,7 +43,7 @@ namespace UserControl.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Cars_CarManafacturers",
+                name: "Cars_CarManufacturers",
                 columns: table => new
                 {
                     CarmanId = table.Column<int>(type: "int", nullable: false),
@@ -51,15 +51,15 @@ namespace UserControl.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cars_CarManafacturers", x => new { x.CarId, x.CarmanId });
+                    table.PrimaryKey("PK_Cars_CarManufacturers", x => new { x.CarId, x.CarmanId });
                     table.ForeignKey(
-                        name: "FK_Cars_CarManafacturers_CarManafacturers_CarmanId",
+                        name: "FK_Cars_CarManufacturers_CarManufacturers_CarmanId",
                         column: x => x.CarmanId,
-                        principalTable: "CarManafacturers",
+                        principalTable: "CarManufacturers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Cars_CarManafacturers_Cars_CarId",
+                        name: "FK_Cars_CarManufacturers_Cars_CarId",
                         column: x => x.CarId,
                         principalTable: "Cars",
                         principalColumn: "CarId",
@@ -67,18 +67,18 @@ namespace UserControl.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Cars_CarManafacturers_CarmanId",
-                table: "Cars_CarManafacturers",
+                name: "IX_Cars_CarManufacturers_CarmanId",
+                table: "Cars_CarManufacturers",
                 column: "CarmanId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Cars_CarManafacturers");
+                name: "Cars_CarManufacturers");
 
             migrationBuilder.DropTable(
-                name: "CarManafacturers");
+                name: "CarManufacturers");
 
             migrationBuilder.DropTable(
                 name: "Cars");

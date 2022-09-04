@@ -15,16 +15,16 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
 
     protected override void OnModelCreating(ModelBuilder builder)
     {
-        builder.Entity<Car_CarManafacturer>().HasKey(cm => new
+        builder.Entity<Car_CarManufacturer>().HasKey(cm => new
         {
             cm.CarId,
             cm.CarmanId
         });
 
-        builder.Entity<Car_CarManafacturer>().HasOne(m => m.CarManafacturer).WithMany(cm => cm.Cars_CarManafacturers).HasForeignKey(m =>
+        builder.Entity<Car_CarManufacturer>().HasOne(m => m.CarManufacturer).WithMany(cm => cm.Cars_CarManufacturers).HasForeignKey(m =>
         m.CarmanId);
 
-        builder.Entity<Car_CarManafacturer>().HasOne(m => m.Car).WithMany(cm => cm.Cars_Manafacturers).HasForeignKey(m =>
+        builder.Entity<Car_CarManufacturer>().HasOne(m => m.Car).WithMany(cm => cm.Cars_Manufacturers).HasForeignKey(m =>
         m.CarId);
 
         base.OnModelCreating(builder);
@@ -34,6 +34,6 @@ public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     }
 
     public DbSet<Car> Cars { get; set; }
-    public DbSet<CarManafacturer>  CarManafacturers { get; set; }
-    public DbSet<Car_CarManafacturer> Cars_CarManafacturers { get; set; }
+    public DbSet<CarManufacturer>  CarManufacturers { get; set; }
+    public DbSet<Car_CarManufacturer> Cars_CarManufacturers { get; set; }
 }

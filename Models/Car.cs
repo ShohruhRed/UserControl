@@ -20,7 +20,7 @@ namespace UserControl.Models
 
         //Relationship
 
-        public List<Car_CarManafacturer> Cars_Manafacturers { get; set; }
+        public List<Car_CarManufacturer> Cars_Manufacturers { get; set; }
 
 
     }
