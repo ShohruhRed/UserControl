@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using UserControl.Data;
+using UserControl.Data.Services;
 using UserControl.Models;
 
 namespace UserControl
@@ -34,6 +35,7 @@ namespace UserControl
             builder.Services.AddSession();
 
             builder.Services.AddTransient<IUsers, Users>();
+            builder.Services.AddScoped<ICarsService, CarsService>();
 
             builder.Services.AddControllersWithViews();
 

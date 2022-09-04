@@ -1,19 +1,20 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using UserControl.Data;
+using UserControl.Data.Services;
 
 namespace UserControl.Controllers
 {
     public class CarsController : Controller
     {
-        private readonly ApplicationDbContext _dbContext;
+        private readonly ICarsService _service;
 
-        public CarsController(ApplicationDbContext dbContext)
+        public CarsController(ICarsService service)
         {
-            _dbContext = dbContext;
+            _service = service;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _dbContext.Cars.ToList();
+            var data =  await _service.GetAll();
 
             return View(data);
         }
