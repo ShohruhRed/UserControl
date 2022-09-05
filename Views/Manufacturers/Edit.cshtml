@@ -3,18 +3,18 @@
 @using UserControl.Data;
 
 @{
-    ViewData["Title"] = "Create a new movie";
+    ViewData["Title"] = "Update manufacturer";
 }
 
 <div class="row">
     <div class="col-md-8 offset-2">
         <p>
-            <h4>Create a new Manafacturer</h4>
+            <h4>Update manufacturer</h4>
         </p>
 
         <div class="row">
             <div class="col-md-8 offset-2">
-                <form asp-action="Create">
+                <form asp-action="Edit">
                     <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
                     <div class="row">
@@ -28,24 +28,24 @@
                                 <label asp-for="FoundationDate" class="control-label"></label>
                                 <input asp-for="FoundationDate" type="date" class="form-control" />
                                 <span asp-validation-for="FoundationDate" class="text-danger"></span>
-                            </div>                           
-                           
+                            </div>
                             <div class="form-group">
                                 <label asp-for="ImageURL" class="control-label"></label>
-                                <input asp-for="ImageURL" class="form-control" />
+                                <input asp-for="ImageURL" type="date" class="form-control" />
                                 <span asp-validation-for="ImageURL" class="text-danger"></span>
                             </div>
-                        </div>
-                        <div class="col-md-6">
-                            
                             <div class="form-group">
                                 <label asp-for="CarCategory" class="control-label"></label>
-                                <select asp-for="CarCategory" class="form-control" asp-items="Html.GetEnumSelectList<CarCategory>()"></select>
+                                <input asp-for="CarCategory" type="number" class="form-control" />
                                 <span asp-validation-for="CarCategory" class="text-danger"></span>
                             </div>                            
+                        </div>
+                        <div class="col-md-6">                          
+                            
+                            
                             <div class="form-group">
                                 <label asp-for="CarIds" class="control-label"></label>
-                                <select asp-for="CarIds" class="form-control" asp-items="ViewBag.Cars" multiple></select>
+                                <select asp-for="CarIds" class="form-control" asp-items="ViewBag.Actors" multiple></select>
                                 <span asp-validation-for="CarIds" class="text-danger"></span>
                             </div>
                         </div>
@@ -63,7 +63,7 @@
                     </div>
 
                     <div class="form-group">
-                        <input type="submit" value="Create" class="btn btn-outline-success float-right" />
+                        <input type="submit" value="Update" class="btn btn-outline-success float-right" />
                         <a class="btn btn-outline-secondary" asp-action="Index">Show all</a>
                     </div>
 
@@ -77,6 +77,10 @@
 
 @section Scripts{
     <script>
+        $(document).ready(function () {
+            var output = document.getElementById("ImageUrlPreview");
+            output.src = $("#ImageURL").val();
+        });
         $("#ImageURL").on("change", function () {
             var output = document.getElementById("ImageUrlPreview");
             output.src = $(this).val();

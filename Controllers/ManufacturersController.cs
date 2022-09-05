@@ -9,8 +9,7 @@ using UserControl.ViewModels;
 namespace UserControl.Controllers
 {
     public class ManufacturersController : Controller
-    {
-        private readonly ApplicationDbContext _dbContext;
+    {       
         private readonly IManufacturersService _service;
 
         public ManufacturersController(IManufacturersService service)
@@ -49,7 +48,7 @@ namespace UserControl.Controllers
         {
             var manufacturerDropdownsData = await _service.GetNewManufacturerDropdownsValues();
             
-            ViewBag.Cars = new SelectList(manufacturerDropdownsData.Cars, "CarId", "Name");
+            ViewBag.Cars = new SelectList(manufacturerDropdownsData.Cars, "Id", "Name");
 
             return View();
 
@@ -62,12 +61,55 @@ namespace UserControl.Controllers
             {
                 var movieDropdownsData = await _service.GetNewManufacturerDropdownsValues();
                 
-                ViewBag.Cars = new SelectList(movieDropdownsData.Cars, "CarId", "CarName");
+                ViewBag.Cars = new SelectList(movieDropdownsData.Cars, "Id", "CarName");
 
                 return View(manufacturerVM);
             }
 
             await _service.AddNewManufacturerAsync(manufacturerVM);
+            return RedirectToAction(nameof(Index));
+        }
+
+        //GET: Movies/Edit/1
+        public async Task<IActionResult> Edit(int id)
+        {
+            var manufacturerDetails = await _service.GetManufacturerByIdAsync(id);
+            if (manufacturerDetails == null) return View("NotFound");
+
+            var response = new NewManufacturerVM()
+            {
+                Id = manufacturerDetails.Id,
+                Name = manufacturerDetails.Name,
+                Description = manufacturerDetails.Description,               
+                FoundationDate = manufacturerDetails.FoundationDate,                
+                ImageURL = manufacturerDetails.Logo,
+                CarCategory = manufacturerDetails.CarCategory,
+                
+                CarIds = manufacturerDetails.Cars_CarManufacturers.Select(n => n.CarId).ToList(),
+            };
+
+            var movieDropdownsData = await _service.GetNewManufacturerDropdownsValues();           
+            ViewBag.Cars = new SelectList(movieDropdownsData.Cars, "Id", "FullName");
+
+            return View(response);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Edit(int id, NewManufacturerVM manufacturerVM)
+        {
+            if (id != manufacturerVM.Id) return View("NotFound");
+
+            if (!ModelState.IsValid)
+            {
+                var manDropdownsData = await _service.GetNewManufacturerDropdownsValues();
+
+                ViewBag.Cars = new SelectList(manDropdownsData.Cars, "Id", "Name");
+               
+
+                return View(manufacturerVM);
+            }
+
+            await _service.UpdateManufacturerAsync(manufacturerVM);
             return RedirectToAction(nameof(Index));
         }
     }
