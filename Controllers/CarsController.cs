@@ -18,5 +18,11 @@ namespace UserControl.Controllers
 
             return View(data);
         }
+
+        //Get: Cars/Create
+        public IActionResult Create()
+        {
+            return View();
+        }
     }
 }
