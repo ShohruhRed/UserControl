@@ -36,6 +36,7 @@ namespace UserControl
 
             builder.Services.AddTransient<IUsers, Users>();
             builder.Services.AddScoped<ICarsService, CarsService>();
+            builder.Services.AddScoped<IManufacturersService, ManufacturersService>();
 
             builder.Services.AddControllersWithViews();
 

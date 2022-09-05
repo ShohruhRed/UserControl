@@ -18,7 +18,7 @@ namespace UserControl.Data.Services
 
         public async Task DeleteAsync(int id)
         {
-            var result = await _dbContext.Cars.FirstOrDefaultAsync(n => n.CarId == id);
+            var result = await _dbContext.Cars.FirstOrDefaultAsync(n => n.Id == id);
             _dbContext.Cars.Remove(result);
             await _dbContext.SaveChangesAsync();
         }
@@ -31,7 +31,7 @@ namespace UserControl.Data.Services
 
         public async Task<Car> GetByIdAsync(int id)
         {
-            var result = await _dbContext.Cars.FirstOrDefaultAsync(n => n.CarId == id);
+            var result = await _dbContext.Cars.FirstOrDefaultAsync(n => n.Id == id);
             return result;
         }
 

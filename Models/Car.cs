@@ -1,11 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using UserControl.Data.Base;
 
 namespace UserControl.Models
 {
-    public class Car
+    public class Car : IEntityBase
     {
         [Key]
-        public int CarId { get; set; }
+        public int Id { get; set; }
 
         [Display(Name = "Profile picture Url")]
         [Required(ErrorMessage ="Profile picture is required")]
@@ -24,7 +25,6 @@ namespace UserControl.Models
         //Relationship
 
         public List<Car_CarManufacturer> Cars_Manufacturers { get; set; }
-
-
+        
     }
 }

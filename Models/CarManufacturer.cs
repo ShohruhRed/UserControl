@@ -1,9 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using UserControl.Data;
+using UserControl.Data.Base;
 
 namespace UserControl.Models
 {
-    public class CarManufacturer
+    public class CarManufacturer : IEntityBase
     {
         [Key]
         public int Id { get; set; }
