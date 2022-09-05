@@ -4,9 +4,9 @@ namespace UserControl.Data.Services
 {
     public interface ICarsService
     {
-        Task<IEnumerable<Car>> GetAll();
-        Car GetById();
-        void Add(Car car);
+        Task<IEnumerable<Car>> GetAllAsync();
+        Task<Car> GetByIdAsync(int id);
+        Task AddAsync(Car car);
         Car Update(int id, Car newCar);
         void Delete(int id);
     }

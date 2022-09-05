@@ -10,9 +10,10 @@ namespace UserControl.Data.Services
         {
             _dbContext = dbContext;
         }
-        public void Add(Car car)
+        public async Task AddAsync(Car car)
         {
-            throw new NotImplementedException();
+            await _dbContext.Cars.AddAsync(car);
+            await _dbContext.SaveChangesAsync();
         }
 
         public void Delete(int id)
@@ -20,20 +21,21 @@ namespace UserControl.Data.Services
             throw new NotImplementedException();
         }
 
-        public async Task<IEnumerable<Car>> GetAll()
+        public async Task<IEnumerable<Car>> GetAllAsync()
         {
             var result = await _dbContext.Cars.ToListAsync();
             return result;
         }
 
-        public Car GetById()
+        public async Task<Car> GetByIdAsync(int id)
         {
-            throw new NotImplementedException();
+            var result = await _dbContext.Cars.FirstOrDefaultAsync(n => n.CarId == id);
+            return result;
         }
 
         public Car Update(int id, Car newCar)
         {
             throw new NotImplementedException();
-        }
+        }        
     }
 }
