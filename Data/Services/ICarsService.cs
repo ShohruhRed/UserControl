@@ -7,7 +7,7 @@ namespace UserControl.Data.Services
         Task<IEnumerable<Car>> GetAllAsync();
         Task<Car> GetByIdAsync(int id);
         Task AddAsync(Car car);
-        Car Update(int id, Car newCar);
-        void Delete(int id);
+        Task<Car> UpdateAsync(int id, Car newCar);
+        Task DeleteAsync(int id);
     }
 }
