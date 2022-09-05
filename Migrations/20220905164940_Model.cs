@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace UserControl.Migrations
 {
-    public partial class ModelRelationship : Migration
+    public partial class Model : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -30,7 +30,7 @@ namespace UserControl.Migrations
                 name: "Cars",
                 columns: table => new
                 {
-                    CarId = table.Column<int>(type: "int", nullable: false)
+                    Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     ProfilePictureUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CarName = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -39,7 +39,7 @@ namespace UserControl.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Cars", x => x.CarId);
+                    table.PrimaryKey("PK_Cars", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -62,7 +62,7 @@ namespace UserControl.Migrations
                         name: "FK_Cars_CarManufacturers_Cars_CarId",
                         column: x => x.CarId,
                         principalTable: "Cars",
-                        principalColumn: "CarId",
+                        principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 

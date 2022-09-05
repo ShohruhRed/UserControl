@@ -12,8 +12,8 @@ using UserControl.Data;
 namespace UserControl.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220904125102_ModelRelationship")]
-    partial class ModelRelationship
+    [Migration("20220905164940_Model")]
+    partial class Model
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -236,11 +236,11 @@ namespace UserControl.Migrations
 
             modelBuilder.Entity("UserControl.Models.Car", b =>
                 {
-                    b.Property<int>("CarId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CarId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("CarName")
                         .IsRequired()
@@ -257,7 +257,7 @@ namespace UserControl.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("CarId");
+                    b.HasKey("Id");
 
                     b.ToTable("Cars");
                 });
