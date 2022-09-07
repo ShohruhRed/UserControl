@@ -21,7 +21,7 @@ namespace UserControl.Data.Services
                 Description = data.Description,
                 Logo = data.ImageURL,
                 FoundationDate = data.FoundationDate,
-                CarCategory = data.CarCategory
+                CarCategory = data.CarCategory,
 
             };
             await _context.CarManufacturers.AddAsync(newManufacturer);
@@ -32,7 +32,7 @@ namespace UserControl.Data.Services
             {
                 var newCarMan = new Car_CarManufacturer()
                 {
-                    CarmanId = data.Id,
+                    CarmanId = newManufacturer.Id,
                     CarId = carId
                 };
                 await _context.Cars_CarManufacturers.AddAsync(newCarMan);
