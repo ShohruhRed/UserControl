@@ -30,7 +30,7 @@ namespace UserControl.ViewModels
         public CarCategory CarCategory { get; set; }
 
         //Relationships
-        [Display(Name = "Select actor(s)")]
+        [Display(Name = "Select a car(s)")]
         [Required(ErrorMessage = "Manfacturer car(s) is required")]
         public List<int> CarIds { get; set; }
 

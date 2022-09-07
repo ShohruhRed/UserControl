@@ -61,7 +61,7 @@ namespace UserControl.Controllers
             {
                 var movieDropdownsData = await _service.GetNewManufacturerDropdownsValues();
                 
-                ViewBag.Cars = new SelectList(movieDropdownsData.Cars, "Id", "CarName");
+                ViewBag.Cars = new SelectList(movieDropdownsData.Cars, "Id", "Name");
 
                 return View(manufacturerVM);
             }
@@ -89,7 +89,7 @@ namespace UserControl.Controllers
             };
 
             var movieDropdownsData = await _service.GetNewManufacturerDropdownsValues();           
-            ViewBag.Cars = new SelectList(movieDropdownsData.Cars, "Id", "FullName");
+            ViewBag.Cars = new SelectList(movieDropdownsData.Cars, "Id", "Name");
 
             return View(response);
         }
