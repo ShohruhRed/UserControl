@@ -112,5 +112,27 @@ namespace UserControl.Controllers
             await _service.UpdateManufacturerAsync(manufacturerVM);
             return RedirectToAction(nameof(Index));
         }
+
+        //Get: Cars/Delete/1
+        public async Task<IActionResult> Delete(int id)
+        {
+            var ManufacturerDetails = await _service.GetByIdAsync(id);
+
+            if (ManufacturerDetails == null) return View("NotFound");
+
+            return View(ManufacturerDetails);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public async Task<IActionResult> DeleteConfiremed(int id)
+        {
+            var carDetails = await _service.GetByIdAsync(id);
+
+            if (carDetails == null) return View("NotFound");
+
+
+            await _service.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
+        }
     }
 }
