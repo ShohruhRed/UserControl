@@ -30,7 +30,7 @@ namespace UserControl.Controllers
 
         public async Task<IActionResult> Filter(string searchString)
         {
-            var allMovies = await _service.GetAllAsync(n => n.Name);
+            var allMovies = await _service.GetAllAsync(n => n.Description);
 
             if (!string.IsNullOrEmpty(searchString))
             {
@@ -89,7 +89,7 @@ namespace UserControl.Controllers
             };
 
             var movieDropdownsData = await _service.GetNewManufacturerDropdownsValues();           
-            ViewBag.Cars = new SelectList(movieDropdownsData.Cars, "Id", "Name");
+            ViewBag.Cars = new SelectList(movieDropdownsData.Cars, "Id", "CarName");
 
             return View(response);
         }
@@ -103,7 +103,7 @@ namespace UserControl.Controllers
             {
                 var manDropdownsData = await _service.GetNewManufacturerDropdownsValues();
 
-                ViewBag.Cars = new SelectList(manDropdownsData.Cars, "Id", "Name");
+                ViewBag.Cars = new SelectList(manDropdownsData.Cars, "Id", "CarName");
                
 
                 return View(manufacturerVM);

@@ -16,7 +16,7 @@ namespace UserControl.Data.Services
         public async Task AddNewManufacturerAsync(NewManufacturerVM data)
         {
             var newManufacturer = new CarManufacturer()
-            {
+            {                
                 Name = data.Name,
                 Description = data.Description,
                 Logo = data.ImageURL,
@@ -30,12 +30,12 @@ namespace UserControl.Data.Services
             //Add Movie Actors
             foreach (var carId in data.CarIds)
             {
-                var newActorMovie = new Car_CarManufacturer()
+                var newCarMan = new Car_CarManufacturer()
                 {
                     CarmanId = data.Id,
                     CarId = carId
                 };
-                await _context.Cars_CarManufacturers.AddAsync(newActorMovie);
+                await _context.Cars_CarManufacturers.AddAsync(newCarMan);
             }
             await _context.SaveChangesAsync();
         }
@@ -72,18 +72,18 @@ namespace UserControl.Data.Services
                 await _context.SaveChangesAsync();
             }
 
-            //Remove existing actors
+            //Remove existing cars
             var existingCarsDb = _context.Cars_CarManufacturers.Where(n => n.CarmanId == data.Id).ToList();
             _context.Cars_CarManufacturers.RemoveRange(existingCarsDb);
             await _context.SaveChangesAsync();
 
-            //Add Movie Actors
+            //Add Manufacturers Cars
             foreach (var carId in data.CarIds)
             {
                 var newCarManufacturer = new Car_CarManufacturer()
                 {
                     CarmanId = data.Id,
-                    CarId = data.Id
+                    CarId = carId
                 };
                 await _context.Cars_CarManufacturers.AddAsync(newCarManufacturer);
             }
