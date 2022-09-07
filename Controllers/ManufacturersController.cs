@@ -48,7 +48,7 @@ namespace UserControl.Controllers
         {
             var manufacturerDropdownsData = await _service.GetNewManufacturerDropdownsValues();
             
-            ViewBag.Cars = new SelectList(manufacturerDropdownsData.Cars, "Id", "Name");
+            ViewBag.Cars = new SelectList(manufacturerDropdownsData.Cars, "Id", "CarName");
 
             return View();
 
@@ -59,9 +59,9 @@ namespace UserControl.Controllers
         {
             if (!ModelState.IsValid)
             {
-                var movieDropdownsData = await _service.GetNewManufacturerDropdownsValues();
+                var manufacturerDropdownsData = await _service.GetNewManufacturerDropdownsValues();
                 
-                ViewBag.Cars = new SelectList(movieDropdownsData.Cars, "Id", "Name");
+                ViewBag.Cars = new SelectList(manufacturerDropdownsData.Cars, "Id", "CarName");
 
                 return View(manufacturerVM);
             }
