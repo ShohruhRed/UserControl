@@ -20,63 +20,63 @@ namespace UserControl.Data
                         new Car()
                         {
                             CarName = "Panamera Turbo S",
-                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABoLoiFLbvBD4b5uDBtiOFE_F0glzPPFWE0cnHt9qcOAGw89av60O-rdGHSHsavbaIJxhBzKuCz5TIN09vHaD12dwninQ26G14bNXq1HK-xpdnAz5MvGI6IeILg0f1k6aHcIDlMvhR07xoAEMCcA6uPKNQgRdJwXPfEg9M4svejD9YymhbhQh_WzM8tMbJTz5jwNzw1fs22D_ScmF6hs7WeZEwUTrsIe2ss3qwhhkiq-vltZGhuNDca8BGGnjz_yE2zPa2iTpXDhYpSIFKaNs5pDlikyeZ9y6pL6BLhnS4p01Fi3HygIYUpxZ5jElKY-ijUiDgzJCwtYfepli2cBdbWq0gtgJqtGQekwCP26cJbDwSAKcDTZW1SqkZlNBOEN0P8/p.jpeg",
+                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABpln39DPlZRiqktbkc99lUAkysSaVjLH5FBEMaZxn3-0OFdEN5mc_Pl-l0CT9qyue7Ea9UPAzvc9AwRqyuuw7QevcA3bxcygyozwFCYi5dVu3BtvqtMrnxAaHizhEg0yVSEQLsLgojttPTfTVc-NnS_zpD4JaR2PmCiEB1RI1q61GhbWx37NRzMDFIp5Ck4AaIrW0IOAoqkY4uemmSaO_9fyIVvCKUWCYZHZ22BDC-wg8v72mYGOO5g9IC0t4l60yGbBcVFcxSJmRq2XMVTu9PNKPyZBb6BX2p83Han5FBrygiuYU4P0ejkYL8CV0L6oCDPEdMtsa7esSU39vqZCCha7JjVWGacwQToJNAh-7nnRQdsoAzPcrbBcg68evVPerE/p.jpeg",
                             StartDate = DateTime.Now.AddDays(-200),
                             Description = "luxary"
                         },
                         new Car()
                         {
                             CarName = "Cayenne GT",
-                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABqErh9wfVRfX-_tAD-Gp4ppC6VirMwqwkURzX6x8weKWNnuVB6atdaYGd5ybYSZ-X5Fz31__0qeChvlrGTLf7JeGGl9t9N6ehP7w32n2ZpFJsPibb-6kAn0EidPPQc0APSfJQxEJIKxp07uiVgUaghwUWGgyUvjfb68jZ_Y9HBpHePRGviZFC0ZGLno8Jx--PXrbkfenO6Put5hzj0HhP4cxNg9JXx0SGWbHSTKrH3jWz6aMwCV_5fxoopyGFxHbDUql3RcYtyxf5bTXaF81qNVbKFcZIQvfxoue1hG-xzwPuLcuDEHW5NMIYPuMaBt-C6jLS1DI1LMPsSBu0iwFrk8M1BaihFd31vS19sJ5JDlvRG4HR7bOmUQm5gKCy1goFfWfJc1PCSXLqcUc4s_QWXP/p.jpeg",
+                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABoABdpaliKXw5YabHsfaQ01ILixs4G--1ZHo2ZvoAH3yZH-Wo9hXToZ8epwMlZK4f2yvHr-sVB_3_py_fmMUNpzRsFoaR31pxf01S4UxXj9-1GAXE_JMPyp_5h9x4w7SojiFHkt5uBYMAUfDCZmrvILu1SiCPy6JsiGbrKaQLmR0HqurxWfwHFY4eTVxdC7EZoi4CjF_X3PqNUNkxBx2fHmAWWqZq6hNAJXVYuL7CQVr-FDDWTXJWDK4Xh2TK4jVBR0VQyLSDaC5NzeI1O0zYllvZHn6CNSkP_glyWK0fOBsg3KQeUTWd4MEGLOHKTk13sFHo3e0pwfwIbCnF251hk5ckv48lsAV6BlAF1An_56uLW3s4fsic8PZ2eUQdWW7a8/p.jpeg",
                             StartDate = DateTime.Now,
                             Description = "crossover"
                         },
                         new Car()
                         {
                             CarName = "911",
-                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABob_p96yP2ywxOTGxCj52pOShyRh8Q0zTuyr2jVJeXlTbcr1lhhtaneBR6J_aTDg8W8LezVXUKAo4KsyOs9X590TqLug3e7UcyrKuqCy58bae9UJkS7azmSf11K-xcxxxZndNGJ8OP8GGJ_KN-rFiBpAe-3Cvk3BupnSc70OE16YYg3HH7l-VpUmBWRI7Kle9qc1PQTTJE8vgwz4ELa_BAoaP4ydl8hUozFm5jE0aCQ8ZXViI0iC8nrJv1EWf09C8QlBLNCj4vl5ebXItYCQT1f8tmJup8rkdwG-PY2ZAa_9EcVuWRAx426YUtdJK3MfRk05I68kPEp65wJQYGjwggVd7NtMnCgmDXfMn474a6hnU-yUu2iwJ5bmJwTCtCOjNA/p.jpeg",
+                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABopr0AGjnmeMHm58x22ZckEo9AaCK8ur2wvCL80gVgI8vospLmr-7FdOB72dzSRpaTalbA6dh2U6GUbBINOepjzZ9hZGb6Fb4_O1mkFvkR45HKacrLawbCZG8TvQl6gzLjBFmLkyzyyTAEeLIn6TUHrSU5Z11Idaff5bABLqV8u1VQBWo4kskgUP-aKc-gpdXjaszL60wWBFFF6tAf0NZ8Hwk5mBWnYdUEkJmhV7zyyvMPazEhQGFSa8A8LZZGUytGMnNR_kzG6eSA0oL8UMI-u9qqOGIheDzC1oTLirMPGokNhVIlOTdOZDP548U9OsYMSsx0M7YWTK-LzAwAKUfJ-y0Fzt7_TM48Mkfwx2rEV-Y9rTCc8S_T_cnO4tUQ42M4/p.jpeg",
                             StartDate = DateTime.Now.AddDays(10),
                             Description = "sport"
                         },
                          new Car()
                         {
                             CarName = "RANGE ROVER SPORT",
-                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABpC392zzDt8GAGlqSM4zYKiJ2B0t6IrJ-a5_o-Wy4rPW5802GVroxkPumvWCySBFv5X3l8XnxYBBGSibcSqEA8D9WjRpMM5XhB_mwd0525Wasu3me9IfIHgE7te9AhZ9ojJUa_BUktc-GdEw5lRdTUXjBFun1R0xMJ7K25CWYi8V0KbOmnv6BvAzt6zYhdWgsUKuOXTcgGhUCk3ILpzMAjOO0m9dl8sDVrmr-QBHtEJssHrQm7fo085q_X9ypdAkocFI5G1C3L9t4V5e_OmEDIcoYmRSgVfIx1u5BCtAsvX3DmJQBdUX2Th95qJ8vfPTwTaxQ43-kqFMP847W7a3zCXGr5kvl_a8i8sA6ErarzRAxfy-aemd-afQB_J1NfAL8g/p.jpeg",
+                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABpaj5ZGa6_QzIPgFPRE_ZlvHD0UGNNtS8pDQcDrH8cKXOzczf6jC0aa9JxsoEwVHOf-G1IoBnv52GI60aFEkAeZRvdsIrz63FT80_HXpHk_4lksrpPyfIBvOcqC4Wo1HV7ADW3WEL3wBvottpxOtCUIS__88Bbv1TN6FpSafPZB9aihSZRoPKmnE2ApQKd-sdkhOzh4veyx1xebp88uiWePSXOe6O31Gh3gGYmakUVXmr2U-SyHV1pp48QygCXTZugTS_gW_hnQHNMjPx54Mv95bIIyArwAAoMhtAZuAWY7mvcMHuauXDfeRikb8tOAFtqOKPWcQjpX6CmWURLJUg6H_LlSHO1x1bCZtnjDu1WkBPzsxem-I5anaatwAzqVFlM/p.jpeg",
                             StartDate = DateTime.Now.AddDays(-200),
                             Description = "luxary"
                         },
                           new Car()
                         {
                             CarName = "RANGE ROVER VELAR",
-                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABpreFhD5GZ8VuYcwl7RhxD6sCAYBofgQSOHPGXAOMCjyP51QQ2ISTJnqsAkthQuoTRRqD5AvKpr-kyeECk6GUO2Y-OG5AhqWQMoziR8b8cC6h2FeLgVpNmfi828sYihr1u16yHOC8hk5dGjH_ZXCL2XGBFSJYVWo9g924_e3pRtjp4_-_C4RgbSwnsgCpiCN0U7uYg-tEpZWP4-W_XjV12iuhOogswu251QXq0Ajid-V9aKPD69TNKQei1kflEvlHL8nKlr7hsxXPeAjGrpKxpNQ5xBU1ttskwdOrDgEAt9UiKXQ7-5hlbsxR8eG9Se9XMY5gVf44DQXFYGdmoWqcsj6lMY19AOUvM-jCsDWDC9BIKjE8J9ebAbMbXi_T-IICY/p.jpeg",
+                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABprM6uqze4qB7XWFVgsIsQ2wymWpY7YfB7hCPOk65ZZF9KhvM8pEuNacapXFYGfdrMay0k_wxt3Z48UoWECfPA_b-dAaQp3apGanrph63fU4mhSfcAXj2pGXDbHvJwhyXZcP_pdHgYUocqnuJQocxR25dSQlQiB6OwZsGl3wdvl2jSP24D0QJMAR3Kt7k_ZwgA6zzN2MJgLa2CFUZJVBUD4FKazR8TakZeGnoaZ3qUPai2W_eKek2BljBOqfWughlbn6O6tb-8MAGn-KPQLL7eVMp3EMUrfbOoiOBzMwSEURtxSfU0Yh_YFAH3C0_fPd5D8Is-NqEhpuR6BK-IKvQqmaTjYu5nMiOTEmGuvVS53wIOF7nLgNUEDScmY3EbcUhk/p.jpeg",
                             StartDate = DateTime.Now.AddDays(-200),
                             Description = "luxary"
                         },
                            new Car()
                         {
                             CarName = "RANGE ROVER EVOQUE",
-                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABqaoemUwXhxDCyLtmojHL-E42phAuQ7XCTpVtB2FNdgwsy1naVG3kIj0KFmUukihGLJypqRpy7rP3QtS1Y1Y61yBxanAARTejlCLjf2hs1wYMsSHUw1W_OSxQdHdNDFi1NWnVsZVEFlP1S6SLug3oVscFifqOIxPh5ET5BjCqYfT0f84AQrKbYMfCh7GpCgy7oF_RWxBsVIA5uTExpRSmnOD49zVUGsf1rB1hYeMd0vUFoG643EZInwps5x0R122w1UBq07Jr7ZktRpDZpCDRY_BZGex2cr-G8-jRP40SC7psY8moKuG-zcrykbAgmv8DQUbumA7L7EFF_bcuSHr1fyCjwSmo96-cMKKwwZySGnOBGRMfcVEJAZZMRk8Gy5YctzszgcqNx6ba1D5Jq32I42/p.jpeg",
+                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABpSIivci_z3nml73qp6zRG1CxwkuYLQNnhUiHtICmwZikWMl5DXXBg3S7rr-z-aGjQtR2Nb_u8yaAUKSGjgRYj_qWN6P7adC0XyPnPEHtzv_Q8C7b8_t3DggIGPKV6mn6jkb3JHACsiG4p_1ScNp2DpXqVlbhpXgYatMmz9X3rBxkoDFD3tMUDvl1ujfbacKKVs8TN8JIPGWQDaYDzxbYiV3BPJI7b65Wt8j3EqtYSP8w1Ri5NQYg0hotplSz7BGFgVVJJHPYwI_nM--OvqctKkWAJoZM1ROPV2nyjIG1IJnRcd6jABKTrh9JXrLGNZod5ID0cTn73do-uIqhHsYIceJFvIizPnrW6CaYQp_nK0vf5KyTzT3OhFTEFZL05QeK8/p.jpeg",
                             StartDate = DateTime.Now.AddDays(-200),
                             Description = "luxary"
                         },
                             new Car()
                         {
                             CarName = "Phantom",
-                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABq_NFsO49AhiUDat-I5ZMoxlk-ve7deZkxlfWW5x8sAQaALK5Y_UJvzFoUw7R1WfXiPPgroHVA0SWUEObMxEgrrD9D4zdcHg7atPkFX3yu1VZ6RILZltRseDKeJK19PwMsA7i9KemmDPDG0vVDOFDXs7zRtNqu4aMEiWmuwSeImVALTX5qc15RAvQ_3c1zQClKrhdxV6QHprJrJYo-C-d3ZGYj8aH6wMMIRaNoeZUZ5Ta090DdTZC1frUwKaTaTFPnOGRRxYgLmJh5kDASiSV-_tT_120SYLgJHZlMF9diadzYOKKPZXQh9USzWvXgXsYYDSxa_7LIg2GE99q4hJZ0l1kZpjTVCvlw_ZMcSmJJkml_FAVNCQPUXhypL9G0EsCg/p.jpeg",
+                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABqXuBvxVP9U6SPrrumDthsCfMV-vseG7KYsoE2vKGiPv2aCat1BzWJkPTfYeR-9vtalpbeFTZYYBKT5EzP2YKwpUE7KZuJ--5pZbWyY_yYNgqqNrX9zokx9S64bF27pIXOYbJGW21R8t0DqFGXMWHy8FLw2u7k_KHs5w6UQe0SNV2kqEeHfPVPk5yjPo-65HtZI8Eh2SsKLsjej0LHV2oSTV-3UIR_UftJLH_flv92ohLOd_Hx4Oy1mrDSW4LlTTRwOHeWxONhtR971KTB68TwJcXAgXEH6oSUs9gD6PywYBpMKdEgCHIvCGLC_D9EC0WMRJNuUyIC3n_LOQx-pAbb1qsxkpzdfpn2cod72WGLB4b-O2Tcyg5eDs8eEP0gp5P0/p.jpeg",
                             StartDate = DateTime.Now,
                             Description = "luxary"
                         },
                              new Car()
                         {
                             CarName = "Ghost",
-                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABocd3Gmv2HnCSPYp8uAm5jcqOrs6MihE24QTG7yOyk3_O_CekRmWmtr1tNjTDubYCUqYNxO9mVgwqSbkb27zWxIKUAqbun6tnKOXI2vtJKXLKcYPzoS8egaMn3S9EPbNqHXpettI7ELt2-Zjdg1AaOBdgS6fiFFEX-LVKo6owD8RQDtLZ6dsluUlr4ZG0XDGllJnlJg7KXx_xXFW8NF3I1E2b7mdr8hBmjlRDFzEb9EYCW8c_v8UiPs5oZMPgnR8ZLsB7DCmoPnAaUMc3SzmIdoHqXin7z0ZHKlfb4KTw5Z_It80YDvrcKm7kdDbj2Tufyc611jJawWrlGKAbAaIz_t2CGC3dMTkXuIP779toqDcUk5qdVHr-Bu9-hxqpUnKaijT__L2w7Gj98tLEK1DcEI/p.jpeg",
+                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABqOrDBNKt_31Y-rTjoFBqG1pRLAUnU5S_HK6N3bMii62YeKBGsfRXnRHwYexuYr_43k1XDyY62nvRGQlcjP0LUH4ODeItI0ZiZ9sQARAQ0_XcsAfY_NzoJNJP7dIaAwtO95R-tw04JCCGtaKoJyhN0z1f9rDJ4t9d1qnvzKpxyIst092iyMwk__FTqzrMQovm8IB2HbDxHBEwRb9Vbev6EitvvN0XWQDsew5zgE0mD2QNGeyB8EwVatQu9yy9i_AfuPLmsxG6Ms4SYyep-XFtf1h56ZLf6hiKijKRyBNmcXH93gCsBdoxp80Pb1eMFRds2IHvGg_4Qxh6WIWs_ukuiEf4o0tEyRnqtrl8UnA8APru3vwUhrBWtlClIWCl2WgPA/p.jpeg",
                             StartDate = DateTime.Now,
                             Description = "luxary"
                         },
                               new Car()
                         {
                             CarName = "Spectre",
-                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABr1XtA3bazIKow9UI3xQgkKIrJSf6a3L-9xUqjP3eUXWdE4jGd5tnoos9Tb2DZmnbccK6_JE-53o1E226frffn0Ty-hLjj_K97kAfc6Qg9o15tJDxcrk9SH0VTBmR67FIeMyojg-rQNnpeTqTgOnI8kqVv1CYnoS2PHtJ7DI_Q4NlyndlJtwAlKa10Pn5G7vD7s6Z1aS8vpRTQlSbTk3V2nAqIbjAS9imgxoUqrnhhnnbbHmDqs72SPTMZwrUmLMLnZuDCPCbF98v7-e3PpQ3iXeSRDzeDCxXhcVcRCfQ_vN04RUsKm7MyhhVDFB7ysKPmNStBQqVhrFJ7bb1HV7d-KnDhLZaxFKFR-tIDh2CsoYQ_g3EE2ZkRfNIUpGLstBrxT1QjN-ToW4OgLcoaAt-4s/p.jpeg",
+                            ProfilePictureUrl = "https://previews.dropbox.com/p/thumb/ABpwhqId8QDatDI49nfjKCKQxsdiwekCC8cetIfBYMCJ6ctQzmUF36_t8eij_-vAydNy68NwEQoW--BGdBeDDzvxil7BrIqzEdwVAVdA14l7RtxvJt6decapNb7jqyLxRQ5mFzlql7B_baVJsV-Ziw0xqHhSoZZtdDTtJa9HHZ4ArPUSibYH5Ftb6qFWH2sphbNALCX2L7eVNPq9SFbG87dVurTyXk0-mBRIGUDvRaDvRjYBxPmMtTFhI3Ep4-7xVaEk83jZVY76KR5qjJj5gBKVXWQoqz6X1gdH8Bx61RUTfPeKLdrSnBw3Bk9PjpgvCidktX6xe4ZhIAsHRoH4nS6kLPUoXWe9ivgcnTWN9lJZY3JCFgzvfWYDdRoo0MGikdA/p.jpeg",
                             StartDate = DateTime.Now,
                             Description = "luxary"
                         },
@@ -94,7 +94,7 @@ namespace UserControl.Data
                         {
                             Name = "Porsche",
                             Description = "Sport cars",
-                            Logo = "https://previews.dropbox.com/p/thumb/ABrApU0jJTUin5beADAcoRgExwLrGsQ9P6VQ27eueGVzKSWZEweYGufNFw9gVLPFc4Pb5bR-fx4I3Y11Y7lZ4lwKeL0BUiz5sQXLK8Asbl5Prgzir6Ow-oJSz9BdlDmBcedEFVTsxTpvNgo6IaVK5TDM2LB9DucMcYIOvC4GIUxcx9hliIxU6MSLz-cZ-ITRecWKZsbr4pWjqyKmGciMKa3aqqJ4JapnxIm552I052BwK0l_sJx8DdasRcJY8t7dkrJiJdphp0Ww7nYHMA3JUYT6EWQT7E6ehxTdxQ7ENm1Jlo5ks5kOi7na7W_EM8-e7lSG34Yo3GgiuKssnhs9zXRmoMFlhcsFXFL064S3HajiyL0vufc-rSgqGyV-lQVqOyIImpspgM5Gql_bR3FHSLsE/p.jpeg",
+                            Logo = "https://previews.dropbox.com/p/thumb/ABq2RofQV8CYMbQpU2he1qqauy_fYR2b5uc-xmNNCFQE5GXGx9QEOfbKwR404j6eIvDbgZ5dvBsfggngJ5ERhx9KMW4KDI3u-Zgrtf7jRP9Gz3ZHS-5_BGnK2613aZY2GOKh3mC_XZClQQTFa0LVec-jKVMk7Lq2cApYKObnV9qrU8qCVsu_-1LPxfl0-mQv5tlAc2aaYRrzX4_0cJ1IgEU4Ia1-x8lgepdBjhIOMSkUz_Kdxy1eLaRkIdLGjPLJlgsmdzVLH_CBx0WNpHDe8mcf2TELzRfLk_UvZHZYWJEfF9Iin_32uZMSKWnWl5_u2MNwwoUH_tcInAXpR1zmLryES3QJ31EQN-_6aBLHfGvlYEcWUQ62BslIR3cbfUeWE6Y/p.jpeg",
                             FoundationDate = DateTime.Now.AddDays(-1300) ,  
                             CarCategory = CarCategory.Sport
                         },
@@ -103,7 +103,7 @@ namespace UserControl.Data
                         {
                             Name = "Range Rover",
                             Description = "Land Rover",
-                            Logo = "https://previews.dropbox.com/p/thumb/ABp7nr275xDueXaSO8x5BPgsr5EEp110q7oHArbpX8UwWRAqOXBS_uKL0uNG9tHhtvlSdChopKiDxlitd8F8ndtodhINsXVe6NjtBlqS-Jqz9DdzKfjeYxkaqXq-GHfcdHF09l5RuTQmQTUOjEss4Ja4ZG2mn6R2wTpZbR4qcZgZGRE7tRbDXYxTVJc8xTBura5sjnNX6SMr3RA4Q_SsdWj72L3y58FUBJ5vqLelxWh78qQ-LulxRJJkO1g9MQkH-68hgV0eEIOjZPmMFif04ZGgmm5H1GQWcs_dkMtr_zlJd_RdiS-ea3QXX9lG4PPncR-t7Cc3dhpd4W4WH5a5bdBmANrAzEUDNj1SPrZjYRExTYZ86QDjJ1Ne9uIpDo-eu0A/p.jpeg",
+                            Logo = "https://previews.dropbox.com/p/thumb/ABrMgYSNY1N5aV6gNlWNNC-8xz5IVOm3ZJCcvut2mxfaXS4pnSJ3ksvncQ0VoCLBKitcpIPndPl0VYvWvtEZMmfaEC8k9o0zIoWU535Fqu48w9-dtsZTaYsw93FgQSF6ZlJ5NhcrWcyBUCdoJk_7JoimvRYHMeYSbBCLhoDy9NxvPjw3qgyogO68eQwY1O9NKzt_Icmje79HPS5nplY-T5ME7e0p6vjdg55cEu_bZaHW-cLMQrUCQ6fUdf0IUvfYMPE-kxVP6Ou8Ml8DV3YJULozLGsgbBjdi-HPwwO3Px2WrtJo9Cdyj9KJYMePX3uto4Nuw60G62UAbTjC4DD66ePDLuaLjToSGXBAgjOPVYnXQnnXsmnobP_wWY0FFRvQ9X0/p.jpeg",
                             FoundationDate = DateTime.Now.AddDays(-1300),
                             CarCategory = CarCategory.SUV
                         },
@@ -111,7 +111,7 @@ namespace UserControl.Data
                         {
                             Name = "Rolls Royce",
                             Description = "lux",
-                            Logo = "https://previews.dropbox.com/p/thumb/ABof-bC4rEBGhkxWALroprsjLe2iNpViFSDb9AaB90LTvDGx09IYwytyDbK2xo300c5ou2a-UzYVBzVamnxZrCKXXa-sypN20wMLILYmlWne3Qi07KhCZNYnQZ1VwDdtb1UO1nyi3BuHM8m9xsx6oXWvxnzanrNjcUgeW42V87e1C2ZhwNADwuf1c0biefcf7_Qlpfy3c6GjSPfh7wttZZRkbCHNuw2GyOj1wWzaLXwYhhrMtWsgVU6Qc72OniZ_XgN9o5q9rZPS4Vgz67LvqahIaYb8HGDRPIbcIoIi8sJIhd79vyOgxIrKXJPV6EorSe0d2tmqafdH4R8Iv_pNHY8vqV-R34V2zhaEEYOFrW_W5jVzzqkvXsPXy-o-ZhbmHW4/p.jpeg",
+                            Logo = "https://previews.dropbox.com/p/thumb/ABq335r7BM3Cjn4i-EwGdHNwR8x5RMGrYg5v5PYT-4BVovxtuIoXTl2Tmb5bHwodZBH2MJAaMu90j1gXC0tIFTfWbfu7_699MjbR3SuB_fOYoXP4jDenP5ep5oWPxBiWdSuVvCJNsMPLdXcox6e5Y6PDA-i8J_cOiyPYkf40z6IQrdnnGb_oCVMEoxughG6Yp13VNAQhOQsIgqAUYLTDGOyUlKSXQsyYOeJUcPYFS_3bVJ9w-4znyBcrAzqmzEpe-7pvhruxuXE4u9VUgdFO0VHv9b38tPSNa2FBjb2-pRKoo13AqG7SBOLY41tZK0dHwxqd8n5i_L9MuQ1o4_faowOcjOM6kvD3qfZt8k37WyR3w9sgWhIrtXBHsT3CCWYRVAg/p.jpeg",
                             FoundationDate = DateTime.Now.AddDays(-1300),
                             CarCategory = CarCategory.Luxary
                         }
